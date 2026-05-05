@@ -3,13 +3,19 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo installing nodeJS version 20 ...
+
+  pre_build:
+    commands:
+      - echo installing dependencies ...
       - npm install
 
   build:
     commands:
+      - echo building the app ...
       - npm run build
 
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
   base-directory: build
