@@ -2,17 +2,15 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 20
     commands:
-      - echo installing nodeJS version 20 ...
-
-  pre_build:
-    commands:
-      - echo installing dependencies ...
+      - echo Installing dependencies
       - npm install
 
   build:
     commands:
-      - echo building the app ...
+      - echo Building the React app
       - npm run build
 
 artifacts:
